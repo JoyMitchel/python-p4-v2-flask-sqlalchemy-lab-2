@@ -11,6 +11,8 @@ migrate = Migrate(app, db)
 
 db.init_app(app)
 
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def index():
@@ -19,3 +21,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
+    
