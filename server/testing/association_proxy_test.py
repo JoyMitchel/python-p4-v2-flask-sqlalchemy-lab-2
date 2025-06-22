@@ -1,5 +1,7 @@
 from app import app, db
 from server.models import Customer, Item, Review
+from flask import Flask
+
 
 
 class TestAssociationProxy:
